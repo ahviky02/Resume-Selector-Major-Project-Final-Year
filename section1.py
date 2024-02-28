@@ -1,18 +1,7 @@
-# import streamlit as st
-import pickle
-import re
-import nltk
-from function import *
-
-nltk.download("punkt")
-nltk.download("stopwords")
-# loading models
-clf = pickle.load(open("clf.pkl", "rb"))
-tfidf = pickle.load(open("tfidf.pkl", "rb"))
+from library import *
 
 
-# web app
-def main():
+def resume_screening():
     st.title("Resume Screening App")
     # size = 1000 * 1024 * 1024
     uploaded_files = st.file_uploader(
@@ -88,8 +77,3 @@ def main():
             # print(mobile_numbers)
             st.write("Mobile Number:", mobile_numbers)
         # ttt = extract_text_from_pdf(uploaded_file)
-
-
-# python main
-if __name__ == "__main__":
-    main()
