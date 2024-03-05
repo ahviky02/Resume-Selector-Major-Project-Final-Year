@@ -3,6 +3,7 @@ import pickle
 import re
 import nltk
 from function import *
+import pandas as pd
 
 
 nltk.download("punkt")
@@ -16,19 +17,14 @@ def main():
     # Set page to full width
     st.set_page_config(layout="wide")
 
-    # # First section
-    # st.title("First Section")
-    # st.write("This is the content of the first section.")
+    st.markdown("<h2>Resume Screening App</h2>", unsafe_allow_html=True)
 
-    # # Second section
-    # st.title("Second Section")
-    # st.write("This is the content of the second section.")
+    # create tab menu
+    pages = ["Resume", "Data", "Requirements", "About Us"]
+    Resume, Data, Requirements, About = st.tabs(pages)
 
-    # Create two columns layout
-    col1, col2 = st.columns(2)
-
-    # Assign content to columns
-    with col1:
+    with Resume:
+        st.markdown("<h4>Upload Resume</h4>", unsafe_allow_html=True)
         uploaded_files = st.file_uploader(
             "Choose files",
             type=["txt", "pdf"],
@@ -98,15 +94,24 @@ def main():
                 st.write("Skills:", Skills)
                 st.write("Mobile Number:", mobile_numbers)
 
-    with col2:
-        # st.header("Resume Requirements")
+    with Requirements:
+        st.markdown("<h4>Fill Requiremets </h4>", unsafe_allow_html=True)
         skill = st.text_input(
-            "Enter The Required Skills:", placeholder="C++,Python,Data Structure"
+            "Enter The Required Skills:",
+            placeholder="Like: C++,Python,Data Structure",
         )
         # Split the input string into a list of skills
         skills = skill.split(",")
 
-        degree = st.text_input("Enter The Required Degree:", placeholder="B.tech.")
+        degree = st.text_input(
+            "Enter The Required Degree:", placeholder="Like: B.tech."
+        )
+
+    with Data:
+        st.header("Data")
+
+    with About:
+        st.write("My name is Avdhesh Kumar Yadav and I am developer of this projects")
 
 
 if __name__ == "__main__":

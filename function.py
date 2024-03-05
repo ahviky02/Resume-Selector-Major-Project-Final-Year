@@ -1,7 +1,6 @@
 import re
 from PyPDF2 import PdfReader
-
-# import re
+import re
 from library import *
 
 
