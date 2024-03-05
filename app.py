@@ -3,6 +3,7 @@ import pickle
 import re
 import nltk
 from function import *
+from library import *
 
 nltk.download("punkt")
 nltk.download("stopwords")
@@ -13,6 +14,7 @@ tfidf = pickle.load(open("tfidf.pkl", "rb"))
 
 # web app
 def main():
+    st.set_page_config(layout="wide")
     st.title("Resume Screening App")
     # size = 1000 * 1024 * 1024
     uploaded_files = st.file_uploader(
@@ -79,15 +81,10 @@ def main():
 
             mobile_numbers = extract_mobile_numbers(text)
 
-            # st.write("### Extracted Text:")
-            # st.write(text)
-
             st.write("Email:", Email)
             st.write("Degree:", Degree)
             st.write("Skills:", Skills)
-            # print(mobile_numbers)
             st.write("Mobile Number:", mobile_numbers)
-        # ttt = extract_text_from_pdf(uploaded_file)
 
 
 # python main
