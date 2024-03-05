@@ -31,6 +31,12 @@ def main():
             accept_multiple_files=True,
         )
 
+        # Define keys for the dictionary
+        keys = ["Email", "MobileNo.", "Degree", "Skills", "Job Position"]
+
+        # Initialize the dictionary with keys and empty lists as default values
+        my_dict = {key: [] for key in keys}
+
         for uploaded_file in uploaded_files:
             if uploaded_file is not None:
                 try:
@@ -93,6 +99,13 @@ def main():
                 st.write("Degree:", Degree)
                 st.write("Skills:", Skills)
                 st.write("Mobile Number:", mobile_numbers)
+
+                my_dict["Email"].append(Email)
+                my_dict["MobileNo."].append(mobile_numbers)
+                my_dict["Degree"].append(Degree)
+                my_dict["Skills"].append(Skills)
+                my_dict["Job Position"].append(category_name)
+        st.write(my_dict)
 
     with Requirements:
         st.markdown("<h4>Fill Requiremets </h4>", unsafe_allow_html=True)
