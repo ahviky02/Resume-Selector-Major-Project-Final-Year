@@ -81,3 +81,12 @@ def extract_mobile_numbers(text):
     mobile_numbers = re.findall(pattern, text)
     # Return unique mobile numbers
     return set(mobile_numbers)
+
+
+# Function to check if the degree matches a certain value
+def check_degree_to_df(dataframe, degree):
+    for i in dataframe:
+        if i == degree:
+            return "Yes"
+        else:
+            return "No"
