@@ -348,7 +348,7 @@ def main():
             st.write(df[["Email", "MobileNo.", "Skills", "Degree", "Job Position"]])
 
     with About:
-        st.write("My name is Avdhesh Kumar Yadav and I am developer of this projects")
+        st.write("Hello Guys, Resume Screening App With Python and Machine Learning This is a Resume screening Streamlit App. This project focuses on analyzing multiple PDF resume files to explore and gain insights from them. This streamlit app aims to identify suitable candidates based on specified employment requirements.")
 
 
 if __name__ == "__main__":
