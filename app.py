@@ -1,9 +1,10 @@
-from library import *
 import pickle
 import re
-import nltk
-from function import *
 import pandas as pd
+import re
+from PyPDF2 import PdfReader
+import streamlit as st #frontend self server
+import nltk
 
 
 nltk.download("punkt")
@@ -16,7 +17,6 @@ from pytube import YouTube
 import pygame
 import tempfile
 import os
-from pydub import AudioSegment
 
 
 category_mapping = {

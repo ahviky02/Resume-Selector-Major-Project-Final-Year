@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st #frontend self server
 import pickle
 import re
 import nltk
