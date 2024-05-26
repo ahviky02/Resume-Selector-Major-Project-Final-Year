@@ -2,7 +2,7 @@ import pickle
 import re
 import pandas as pd
 import re
-import PyPDF2.PdfReader as PdfReader
+from pypdf import PdfReader
 import streamlit as st #frontend self server
 import nltk
 
