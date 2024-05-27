@@ -1,10 +1,9 @@
+from library import *
 import pickle
 import re
-import pandas as pd
-import re
-from PyPDF2 import PdfReader
-import streamlit as st #frontend self server
 import nltk
+from function import *
+import pandas as pd
 
 
 nltk.download("punkt")
@@ -17,6 +16,7 @@ from pytube import YouTube
 import pygame
 import tempfile
 import os
+from pydub import AudioSegment
 
 
 category_mapping = {
@@ -348,7 +348,7 @@ def main():
             st.write(df[["Email", "MobileNo.", "Skills", "Degree", "Job Position"]])
 
     with About:
-        st.write("Hello Guys, Resume Screening App With Python and Machine Learning This is a Resume screening Streamlit App. This project focuses on analyzing multiple PDF resume files to explore and gain insights from them. This streamlit app aims to identify suitable candidates based on specified employment requirements.")
+        st.write("My name is Avdhesh Kumar Yadav and I am developer of this projects")
 
 
 if __name__ == "__main__":
