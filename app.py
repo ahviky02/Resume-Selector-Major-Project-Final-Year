@@ -348,7 +348,7 @@ def main():
             st.write(df[["Email", "MobileNo.", "Skills", "Degree", "Job Position"]])
 
     with About:
-        st.write("My name is Avdhesh Kumar Yadav and I am developer of this projects")
+        st.write("This is final yaer projects ")
 
 
 if __name__ == "__main__":
