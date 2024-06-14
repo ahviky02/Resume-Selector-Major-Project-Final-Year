@@ -3,13 +3,13 @@ import pickle
 from function import *
 import pickle
 import re
-# import nltk
+import nltk
 from function import *
 import pandas as pd
 
 
-# nltk.download("punkt")
-# nltk.download("stopwords")
+nltk.download("punkt")
+nltk.download("stopwords")
 # loading models
 clf = pickle.load(open("clf.pkl", "rb"))
 tfidf = pickle.load(open("tfidf.pkl", "rb"))

@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+nltk
+PyPDF2
+pickle
+re
