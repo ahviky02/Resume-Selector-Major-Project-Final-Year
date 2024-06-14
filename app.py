@@ -14,11 +14,6 @@ nltk.download("stopwords")
 clf = pickle.load(open("clf.pkl", "rb"))
 tfidf = pickle.load(open("tfidf.pkl", "rb"))
 
-from pytube import YouTube
-import pygame
-import tempfile
-import os
-from pydub import AudioSegment
 
 
 category_mapping = {

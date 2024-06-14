@@ -3,3 +3,4 @@ pandas
 numpy
 nltk
 PyPDF2
+scikit-learn
