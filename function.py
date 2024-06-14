@@ -1,7 +1,7 @@
-import re
 from PyPDF2 import PdfReader
 import re
-from library import *
+import pickle
+from function import *
 
 
 def extract_text_from_pdf(uploaded_file):
