@@ -1,13 +1,13 @@
 from library import *
 import pickle
 import re
-import nltk
+# import nltk
 from function import *
 import pandas as pd
 
 
-nltk.download("punkt")
-nltk.download("stopwords")
+# nltk.download("punkt")
+# nltk.download("stopwords")
 # loading models
 clf = pickle.load(open("clf.pkl", "rb"))
 tfidf = pickle.load(open("tfidf.pkl", "rb"))
@@ -348,7 +348,7 @@ def main():
             st.write(df[["Email", "MobileNo.", "Skills", "Degree", "Job Position"]])
 
     with About:
-        st.write("This is final yaer projects ")
+        st.write("  1.Filter the good resume and find the good resume. \n \n 2.  Upload a resume and evaluate its alignment with the requirements of a good resume.\n 3. Upload multiple files at a time.\n 4. Resume Related insights find and download it .csv formats")
 
 
 if __name__ == "__main__":
